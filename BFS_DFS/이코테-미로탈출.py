@@ -5,7 +5,7 @@ input = stdin.readline
 row, col = map(int, input().split())
 matrix = []
 for k in range(row):
-    matrix.append(list(map(int, input().strip())))
+    matrix.append(list(map(int, input().strip()))) #----------
 visited = [[0] * (col) for _ in range(row)]
 
 que = deque([[0,0]])
