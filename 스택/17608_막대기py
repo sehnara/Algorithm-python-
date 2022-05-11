@@ -1,0 +1,17 @@
+from sys import stdin
+input = stdin.readline
+
+if __name__ == "__main__":
+    N = int(input())
+    POLE = [int(input()) for _ in range(N)]
+    stack = [0]
+    
+    for i in range(N):
+        for s in range(len(stack)-1, -1,-1):
+            if POLE[i] >= stack[s] :
+                stack.pop()
+            else:
+                break
+        stack.append(POLE[i])
+        
+    print(len(stack))
